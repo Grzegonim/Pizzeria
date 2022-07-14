@@ -389,17 +389,17 @@
         subTotalPrice = subTotalPrice + product.price;
         //console.log(subTotalPrice)
       }
-      if(deliveryFee != 0)
-        thisCart.totalPrice = subTotalPrice + deliveryFee;
-        thisCart.dom.deliveryFee.innerHTML = deliveryFee;
-        thisCart.dom.subtotalPrice.innerHTML = subTotalPrice;
+      if(subTotalPrice == 0){
+        thisCart.deliveryFee = 0;
+      }else{
+        thisCart.deliveryFee = 20;
+      }
+        thisCart.totalPrice = subTotalPrice + thisCart.deliveryFee;
         thisCart.dom.totalPrice.innerHTML = thisCart.totalPrice;
         thisCart.dom.totalPriceUp.innerHTML = thisCart.totalPrice;
+        thisCart.dom.deliveryFee.innerHTML = thisCart.deliveryFee;
+        thisCart.dom.subtotalPrice.innerHTML = subTotalPrice;
         thisCart.dom.totalNumber.innerHTML = totalNumber;
-
-        //console.log(thisCart.totalPrice);      
-      //console.log('koszyk', totalNumber, subTotalPrice, thisCart.totalPrice)      
-      //console.log(thisCart)
     }
     remove(event){
       const thisCart = this;
