@@ -34,7 +34,7 @@ class Homepage{
   }
 
   initWidgets() {
-    const thisHome = this;
+    /* eslint-disable */
     const element = document.querySelector('.main-carousel');
     new Flickity(element, {
       cellAlign: 'left',
@@ -43,7 +43,7 @@ class Homepage{
       prevNextButtons: false,
       freeScroll: true,
       wrapAround: true,
-    })
+    });
   }
 }
 
