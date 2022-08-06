@@ -1,0 +1,158 @@
+.home-container {
+  width: 700px;
+  height: 100%;
+  background-color: $color-light;
+  border-radius: 5px;
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-top {
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+  display: flex;
+  font-size: 30px;
+  font-weight: 700;
+
+  &.box{
+    height: 150px;
+    width: 320px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.box h1{
+      margin: 0;
+      padding: 0;
+    }
+
+    &.box p{
+      display: none;
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    &:nth-child(1){
+      background-image: url('../images/assets/pizza-1.jpg');
+    }
+
+    &:nth-child(2){
+      background-image: url('../images/assets/pizza-2.jpg');
+    }
+
+    &:hover a{
+      transform: translateY(-20px);
+      transition-duration: 0.7s;
+
+      p {
+        display: flex;
+      }
+    }
+
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-light;
+  }
+
+  &.box-full{
+    width: 650px;
+    height: 150px;
+    background-color: $color-main;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+.carousel{
+  height: 250px;
+  background-color: $color-light;
+  width: 700px;
+}
+
+.main-carousel {
+  padding: 0 20px;
+
+  img {
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.quote {
+  margin: 20px 0;
+  padding: 0;
+  
+  p:nth-child(3) {
+    font-style: italic;
+  }
+}
+
+.gallery {
+  width: 700px;
+  background-color: $color-light;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  
+}
+
+.gallery-cell {
+  display: flex;
+  width: 210px;
+  height: 200px;
+  margin: 5px;
+
+  &:hover {
+    color: $color-main;
+
+    img {
+      opacity: 0.4;
+    }
+
+    i {
+      color: $color-main;
+      opacity: 1;
+    }
+  }
+
+  i {
+    font-size: 25px;
+    position: relative;
+    align-self: center;
+    left: -80%;
+    opacity: 0;
+    transition: all;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &:nth-child(2){
+      left: -40%;
+    }
+  }
+}
